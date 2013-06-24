@@ -1,0 +1,17 @@
+classes:
+  - cleanup
+
+cleanup::entries:
+  management-files:
+    hour:          *
+    minute:        10
+    last_modified: 5
+    pattern:       "/var/logs/myapp/mylog-*"
+    ensure:        present
+  storage-files:
+    hour:          *
+    minute:        11
+    last_modified: 5
+    pattern:       "/var/logs/myapp/access-*"
+    ensure:        present
+
